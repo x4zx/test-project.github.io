@@ -1,12 +1,12 @@
 function askName() {
-    let name = null;
-    while (name === null || name === '') {
-        name = prompt("Введи своє ім'я");
-
+    let name;
+    do {
+        name = prompt('Введіть своє ім\'я');
         if (name === null || name === '') {
             alert("Будь ласка, введіть своє ім'я для продовження.");
         }
-    }
+    } while (name === null || name === '');
+
     alert("Вітаю, " + name + ", на моїй сторінці!");
 }
 
